@@ -1,0 +1,97 @@
+html{
+    background-color: #D3DAD9;
+    color: #37353E;
+}
+
+h1{
+    font-weight: bold;
+    text-align: center;
+    font-size: 2rem;
+}
+
+body{
+    font-size: 1rem;
+}
+
+.personal-information{
+    font-size: 2rem;
+}
+
+.personal-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1rem;
+    height: 100vh;
+}
+
+.card{
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.card > h3{
+    text-align: center;
+}
+
+.first{
+    grid-column: span 2;
+    justify-items: center;
+}
+
+.btn {
+  background-color: #007BFF; /* Blue */
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue */
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Media query for tablets and phones */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* stack all cards in one column */
+    grid-template-rows: auto;
+    height: auto; /* remove fixed height */
+  }
+
+  .personal-container {
+    flex-direction: column; /* stack image and name vertically */
+    align-items: center;
+    text-align: center;
+  }
+
+  .personal-information {
+    font-size: 1.5rem; /* slightly smaller on mobile */
+    margin-top: 0.5rem;
+  }
+
+  footer {
+    flex-direction: column; /* buttons stacked */
+    gap: 10px; /* spacing between buttons */
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .btn {
+    width: 80%; /* make buttons wider for touch screens */
+    text-align: center;
+  }
+}
